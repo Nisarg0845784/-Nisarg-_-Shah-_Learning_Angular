@@ -1,7 +1,7 @@
 export interface Music {
     musictype: string;
-    musicdirector: string;
-    productionCompany: string;
+    musicName: string;
+    musicDirector: string;
     musicViews: number;
     istraditional?: boolean;
 }
