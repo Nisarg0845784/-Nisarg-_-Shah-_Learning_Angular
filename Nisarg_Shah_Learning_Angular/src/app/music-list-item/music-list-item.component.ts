@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Music } from '../models/music';
 
 @Component({
   selector: 'app-music-list-item',
@@ -7,6 +8,13 @@ import { Component } from '@angular/core';
   templateUrl: './music-list-item.component.html',
   styleUrl: './music-list-item.component.scss'
 })
-export class MusicListItemComponent {
+export class MusicListItemComponent implements OnInit{
+@Input() musicItem?: Music;
+constructor(){
+
+}
+ngOnInit(): void {
+  
+}
 
 }
