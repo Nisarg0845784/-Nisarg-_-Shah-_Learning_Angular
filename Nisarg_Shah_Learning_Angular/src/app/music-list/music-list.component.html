@@ -1,6 +1,4 @@
-<p>music-list works!</p>
+<div *ngFor = "let music of musicList ">
 <app-music-list-item 
-[musicItem]="musicList[0]"></app-music-list-item>
-<app-music-list-item [musicItem]="musicList[1]"></app-music-list-item>
-<app-music-list-item [musicItem]="musicList[2]"></app-music-list-item>
-<app-music-list-item [musicItem]="musicList[3]"></app-music-list-item>
+[musicItem]="music"></app-music-list-item>
+</div>
