@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Music } from './models/music';
 import { NgFor, NgIf } from '@angular/common';
+import { MusicListComponent } from './music-list/music-list.component';
+import { MusicListItemComponent } from './music-list-item/music-list-item.component';
+
 
 
 

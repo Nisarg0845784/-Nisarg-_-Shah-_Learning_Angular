@@ -3,24 +3,7 @@
         <title>Music</title>
     </head>
     <body>
-        <div class="container">
-            <div *ngFor = "let song of musicList">
-                <div>
-                {{song.musictype}}
-                {{song.musicName}}
-                {{song.musicDirector}}
-                {{song.musicViews}}
-                {{song.istraditional}}
-                </div>
-
-                <div>
-             <div *ngIf="song.musictype == 'hiphop'">You can dance on hip hop music</div>
-            <div *ngIf="song.musictype == 'rock'">You will feel beats</div>
-            <div *ngIf="song.musictype == 'sad'">You will cry</div>
-            <div *ngIf="song.musictype == 'classical'">You can see your culture</div>
-            <div *ngIf="song.musictype == 'love'">You will see your inside love </div>
-            </div>
-        </div>
-        </div>
+      <app-music-list-item></app-music-list-item>
+        <app-music-list></app-music-list>
     </body>
 </html>
