@@ -21,11 +21,7 @@ export class MusicListComponent implements OnInit{
       })
       
     }
-    selectedMusic?: Music;
-  selectMusic(student: Music): void {
-    this.selectedMusic = student;
-  }
-
+    
 
 
 
