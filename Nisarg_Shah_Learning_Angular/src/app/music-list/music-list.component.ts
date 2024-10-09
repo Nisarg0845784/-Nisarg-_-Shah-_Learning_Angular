@@ -1,18 +1,20 @@
 import { Component , OnInit} from '@angular/core';
 import { Music } from '../models/music';
 import { MusicService } from '../services/music.service';
-
+import { NgFor } from '@angular/common';
+import { MusicListItemComponent } from '../music-list-item/music-list-item.component';
 
 @Component({
   selector: 'app-music-list',
   standalone: true,
-  imports: [],
+  imports: [NgFor, MusicListItemComponent],
   templateUrl: './music-list.component.html',
   styleUrl: './music-list.component.scss'
 })
 export class MusicListComponent implements OnInit{
     musicList:Music[]=[];
     constructor (private musicService: MusicService){}
+    
     ngOnInit(): void {
       this.musicService.getMusic().subscribe({
         next: (data: Music[]) => this.musicList = data,
@@ -21,7 +23,11 @@ export class MusicListComponent implements OnInit{
       })
       
     }
-    
+    selectedMusic?: Music;
+    selectMusic(music: Music): void {
+    this.selectedMusic = music;
+  }
+
 
 
 
