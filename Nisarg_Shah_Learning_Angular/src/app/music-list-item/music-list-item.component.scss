@@ -1,0 +1,60 @@
+/* Container for the entire music list */
+.music-list {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+/* Individual music item styling */
+.music-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.music-item:hover {
+    background-color: #f1f1f1;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Music item header */
+.music-item h2 {
+    font-size: 20px;
+    color: #333333;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+
+/* Artist name and song details */
+.music-details {
+    font-size: 16px;
+    color: #555555;
+}
+
+.artist-name {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.song-price,
+.song-popularity {
+    display: block;
+    margin-top: 5px;
+    font-size: 14px;
+    color: #666666;
+}
+
+/* Footer or additional info styling */
+.footer {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 14px;
+    color: #999999;
+}

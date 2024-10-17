@@ -40,7 +40,11 @@ export class AppComponent implements OnInit{
 
   ngOnInit(): void {
       this.musicNameService.getMusicByName("Paris Ka trip").subscribe({
-
+        next: (data: Music | undefined) => {
+          if (data) {
+            this.newMusic = data;
+          }
+        }
       })
   }
 }

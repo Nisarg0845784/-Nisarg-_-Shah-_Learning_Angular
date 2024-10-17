@@ -1,3 +1,8 @@
-<div *ngFor = "let music of musicList ">
+<!-- <div *ngFor = "let music of musicList ">
 <app-music-list-item [musicItem]="music"></app-music-list-item>
-</div>
+</div> -->
+
+<div class="music-list">
+    <app-music-list-item *ngFor="let music of musicList" [musicItem]="music"></app-music-list-item>
+  </div>
+  

@@ -1,7 +1,17 @@
-<div style="border: 2px;">
+<!-- <div style="border: 2px;">
 <h2> {{musicItem.musictype}}</h2>
 <h3>{{musicItem.musicName}}</h3>
 <h3>{{musicItem.musicDirector}}</h3>
 <h3> {{musicItem.musicViews}}</h3>
 <h3> {{musicItem.istraditional}}</h3>
-</div>
+</div> -->
+<div class="music-item">
+    <h2>{{ musicItem.musictype }}</h2>
+    <div class="music-details">
+      <p class="artist-name">{{ musicItem.musicName }}</p>
+      <p class="song-price">Price: {{ musicItem.musicDirector }}</p>
+      <p class="song-popularity">Popular: {{ musicItem.musicViews }}</p>
+      <p class="song-popularity">Popular: {{ musicItem.istraditional }}</p>
+    </div>
+  </div>
+  
