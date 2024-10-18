@@ -3,7 +3,17 @@
         <title>Music</title>
     </head>
     <body>
+        <div class="nav-bar">
+            <nav>
+                <a routerLink = "/music" routerLinkActive="active">Music List </a>
+                <a routerLink = "/modify-list-item" routerLinkActive="active">Modify Music</a>
+                
+            </nav>
+
+        </div>
+        
       <app-music-list-item [musicItem]="newMusic"></app-music-list-item>
+    
         <app-music-list></app-music-list>
     </body>
 </html>

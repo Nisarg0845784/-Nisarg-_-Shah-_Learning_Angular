@@ -5,6 +5,8 @@ import { Route, Routes } from '@angular/router';
 import { musicList } from './app/data/mockMusic';
 import { MusicListComponent } from './app/music-list/music-list.component';
 import { MusicListItemComponent } from './app/music-list-item/music-list-item.component';
+import { ModifyListItemComponent } from './app/modify-list-item/modify-list-item.component';
+import { PageNotFoundComponent } from './app/page-not-found/page-not-found.component';
 
 bootstrapApplication(AppComponent, appConfig)
   .catch((err) => console.error(err));
@@ -12,5 +14,7 @@ bootstrapApplication(AppComponent, appConfig)
 const routes: Routes = [
   {path: '', redirectTo : '/music', pathMatch:'full'},
   {path: 'music', component: MusicListComponent},
-  {path: 'music', component: MusicListItemComponent}
+  {path: 'music/:name', component: MusicListItemComponent},
+  {path: 'modify-list-item', component: ModifyListItemComponent},
+  {path: '**', component: PageNotFoundComponent}
 ];

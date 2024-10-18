@@ -6,12 +6,14 @@
 <h3> {{musicItem.istraditional}}</h3>
 </div> -->
 <div class="music-item">
+    <img [src]="musicItem.imageUrl" class="music-image">
     <h2>{{ musicItem.musictype }}</h2>
     <div class="music-details">
       <p class="artist-name">{{ musicItem.musicName }}</p>
       <p class="song-price">Price: {{ musicItem.musicDirector }}</p>
-      <p class="song-popularity">Popular: {{ musicItem.musicViews }}</p>
-      <p class="song-popularity">Popular: {{ musicItem.istraditional }}</p>
+      <p class="song-popularity">Views: {{ musicItem.musicViews }}</p>
+      <p class="song-popularity">Traditional: {{ musicItem.istraditional }}</p>
     </div>
   </div>
+
   
