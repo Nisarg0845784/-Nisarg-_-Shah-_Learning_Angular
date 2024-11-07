@@ -16,5 +16,6 @@ constructor(){
 ngOnInit(): void {
   
 }
-
+onDelete(): void{}
+navigateToMusicList(): void{}
 }
