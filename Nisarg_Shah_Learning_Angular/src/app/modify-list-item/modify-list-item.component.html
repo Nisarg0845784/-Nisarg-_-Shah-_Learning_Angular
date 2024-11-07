@@ -1,6 +1,6 @@
 <!-- <p>modify-list-item works!</p> -->
 
-<form>
+<form [formGroup]="musicForm">
     <div class="form-group">
       <label for="musictype">Music Type</label>
       <input type="text" id="musictype" formControlName="musictype" />
@@ -33,8 +33,12 @@
       <label for="imageUrl">Image URL</label>
       <input type="text" id="imageUrl" formControlName="imageUrl" />
     </div>
+
+    <button type="button" (click)="addMusic()">Add Music</button>
+    <button type="button" (click)="updateMusic()">Update Music</button>
   
     <button type="submit">Submit</button>
+    
   
     <!-- <button type="button" (click)="onDelete()">Delete</button>
   

@@ -15,7 +15,7 @@ import { MusicService } from '../services/music.service';
   templateUrl: './modify-list-item.component.html',
   styleUrl: './modify-list-item.component.scss'
 })
-export class ModifyListItemComponent {
+export class ModifyListItemComponent implements OnInit{
   musicForm: FormGroup;
   song: Music | undefined;
   error: string | null = null;
@@ -33,6 +33,22 @@ export class ModifyListItemComponent {
       musicViews: [''],
       istraditional: [false]
   });}
+
+  ngOnInit(): void {
+      
+  }
+
+  addMusic(){
+    const newMusic: Music= this.musicForm.value;
+    this.musicService.addMusic(newMusic)
+  }
+  updateMusic(){
+    const updatedMusic: Music = this.musicForm.value;
+    this.musicService.updateMusic(updatedMusic)
+  }
+  deleteMusic(musicName: string): void{
+    this.musicService.deleteMusic(musicName)
+}
   
   }
 

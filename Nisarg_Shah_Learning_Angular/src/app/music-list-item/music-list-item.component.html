@@ -13,8 +13,8 @@
       <p class="song-price">Price: {{ musicItem.musicDirector }}</p>
       <p class="song-popularity">Views: {{ musicItem.musicViews }}</p>
       <p class="song-popularity">Traditional: {{ musicItem.istraditional }}</p>
-      <button type="button" (click)="onDelete()">Delete</button>
-      <button type="button" (click)="navigateToMusicList()">Back to List</button>
+      <button type="button" (click)="deleteMusic(musicItem.musicName)">Delete</button>
+      <button type="button" (click)="navigateToMusicList()">Edit</button>
 
     </div>
   </div>

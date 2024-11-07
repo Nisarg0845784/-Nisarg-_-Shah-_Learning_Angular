@@ -1,5 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Music } from '../models/music';
+import { musicList } from '../data/mockMusic';
+import { ActivatedRoute, Router} from '@angular/router';
+import { MusicService } from '../services/music.service';
 
 @Component({
   selector: 'app-music-list-item',
@@ -10,12 +13,19 @@ import { Music } from '../models/music';
 })
 export class MusicListItemComponent implements OnInit{
 @Input() musicItem?: Music;
-constructor(){
+constructor(private router: Router,
+  private musicService : MusicService
+){
 
 }
 ngOnInit(): void {
   
+  
 }
-onDelete(): void{}
-navigateToMusicList(): void{}
+deleteMusic(musicName: string): void{
+    this.musicService.deleteMusic(musicName)
+}
+navigateToMusicList(): void{
+  this.router.navigate(['/modify-list-item']);
+}
 }
