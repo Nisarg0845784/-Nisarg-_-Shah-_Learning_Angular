@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { Music } from '../models/music';
 import { musicList } from '../data/mockMusic';
 import { ActivatedRoute, Router} from '@angular/router';
@@ -7,7 +8,7 @@ import { MusicService } from '../services/music.service';
 @Component({
   selector: 'app-music-list-item',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './music-list-item.component.html',
   styleUrl: './music-list-item.component.scss'
 })

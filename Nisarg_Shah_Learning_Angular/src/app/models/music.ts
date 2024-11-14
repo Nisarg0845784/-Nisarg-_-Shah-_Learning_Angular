@@ -4,5 +4,6 @@ export interface Music {
     musicDirector: string;
     musicViews: number;
     istraditional?: boolean;
+    budget: number;
     imageUrl : String;
 }
