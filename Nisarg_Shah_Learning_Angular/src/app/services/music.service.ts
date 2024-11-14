@@ -9,7 +9,7 @@ export class MusicService {
   private music : Music[] = musicList;
   constructor() { }
   getMusic(): Observable<Music[]>{
-    return of(musicList);
+    return of(this.music);
   }
 
   addMusic(newMusic:Music) : Observable<Music[]>{

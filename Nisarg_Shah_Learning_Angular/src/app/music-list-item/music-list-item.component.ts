@@ -23,7 +23,9 @@ ngOnInit(): void {
   
 }
 deleteMusic(musicName: string): void{
-    this.musicService.deleteMusic(musicName)
+  
+    this.musicService.deleteMusic(musicName).subscribe(()=> {this.router.navigate(['/music'])});
+    
 }
 navigateToMusicList(): void{
   this.router.navigate(['/modify-list-item']);
