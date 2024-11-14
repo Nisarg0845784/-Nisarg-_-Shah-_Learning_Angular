@@ -1,15 +1,8 @@
-<!-- <div style="border: 2px;">
-<h2> {{musicItem.musictype}}</h2>
-<h3>{{musicItem.musicName}}</h3>
-<h3>{{musicItem.musicDirector}}</h3>
-<h3> {{musicItem.musicViews}}</h3>
-<h3> {{musicItem.istraditional}}</h3>
-</div> -->
 <div class="music-item">
     <img [src]="musicItem.imageUrl" class="music-image">
     <h2>{{ musicItem.musictype }}</h2>
     <div class="music-details">
-      <p class="artist-name">{{ musicItem.musicName | uppercase }}</p>
+      <p class="artist-name">{{ musicItem.musicName | uppercase}}</p>
       <p class="song-price">Director Name: {{ musicItem.musicDirector |directorName}}</p>
       <p class="song-popularity">Views: {{ musicItem.musicViews | percent}}</p>
       <p class="song-popularity">Traditional: {{ musicItem.istraditional }}</p>
