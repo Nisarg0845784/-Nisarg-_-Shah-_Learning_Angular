@@ -4,11 +4,12 @@ import { Music } from '../models/music';
 import { musicList } from '../data/mockMusic';
 import { ActivatedRoute, Router} from '@angular/router';
 import { MusicService } from '../services/music.service';
+import { DirectorNamePipe } from '../director-name.pipe';
 
 @Component({
   selector: 'app-music-list-item',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, DirectorNamePipe],
   templateUrl: './music-list-item.component.html',
   styleUrl: './music-list-item.component.scss'
 })
