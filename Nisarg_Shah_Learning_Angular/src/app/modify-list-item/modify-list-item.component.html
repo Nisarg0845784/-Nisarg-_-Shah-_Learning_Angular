@@ -3,25 +3,25 @@
 <form [formGroup]="musicForm">
     <div class="form-group">
       <label for="musictype">Music Type</label>
-      <input type="text" id="musictype" formControlName="musictype" />
+      <input type="text" id="musictype" formControlName="musictype" [appHighlightOnFocus] = "'green'" />
     </div>
   
     
     <div class="form-group">
       <label for="musicName">Music Name</label>
-      <input type="text" id="musicName" formControlName="musicName" />
+      <input type="text" id="musicName" formControlName="musicName" appHighlightOnFocus = "red"/>
     </div>
   
     
     <div class="form-group">
       <label for="musicDirector">Music Director</label>
-      <input type="text" id="musicDirector" formControlName="musicDirector" />
+      <input type="text" id="musicDirector" formControlName="musicDirector" appHighlightOnFocus = "black"/>
     </div>
   
     
     <div class="form-group">
       <label for="musicViews">Music Views</label>
-      <input type="number" id="musicViews" formControlName="musicViews" />
+      <input type="number" id="musicViews" formControlName="musicViews" appHighlightOnFocus = "indigo" />
     </div>
      
     <div class="form-group">
@@ -31,13 +31,13 @@
       
     <div class="form-group">
       <label for="imageUrl">Image URL</label>
-      <input type="text" id="imageUrl" formControlName="imageUrl" />
+      <input type="text" id="imageUrl" formControlName="imageUrl" appHighlightOnFocus = "orange" />
     </div>
 
-    <button type="button" (click)="addMusic()">Add Music</button>
-    <button type="button" (click)="updateMusic()">Update Music</button>
+    <button type="button" (click)="addMusic()" appHighlightOnFocus = "blue">Add Music</button>
+    <button type="button" (click)="updateMusic()" appHighlightOnFocus = "blue">Update Music</button>
   
-    <button type="submit">Submit</button>
+    <button type="submit" appHighlightOnFocus = "blue">Submit</button>
     
   
     <!-- <button type="button" (click)="onDelete()">Delete</button>

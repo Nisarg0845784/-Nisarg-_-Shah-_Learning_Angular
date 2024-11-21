@@ -4,14 +4,13 @@ import { Music } from '../models/music';
 import { OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MusicService } from '../services/music.service';
-import { HoverHighlightDirective } from '../directives/hover-highlight.directive';
-
+import { HighlightOnFocusDirective } from '../directives/highlight-on-focus.directive';
 
 
 @Component({
   selector: 'app-modify-list-item',
   standalone: true,
-  imports: [FormsModule, ReactiveFormsModule, HoverHighlightDirective],
+  imports: [FormsModule, ReactiveFormsModule, HighlightOnFocusDirective],
   templateUrl: './modify-list-item.component.html',
   styleUrl: './modify-list-item.component.scss'
 })
