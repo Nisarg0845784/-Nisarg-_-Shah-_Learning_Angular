@@ -1,16 +1,43 @@
 <div class="music-item" [appHoverHighlight]="'yellow'">
+  <mat-card appearance="outlined">
+    <mat-card-header>
+      <mat-card-title>Songs</mat-card-title>
+    </mat-card-header>
+    
+  </mat-card>
+  <br>
+  <mat-card appearance="outlined">
+
+  </mat-card>
+  <div  matBadgeOverlap="false" class="demo-section">Honey Singh</div>
+
+  
     <img [src]="musicItem.imageUrl" class="music-image">
     <h2>{{ musicItem.musictype }}</h2>
     <div class="music-details">
-      <p class="artist-name">{{ musicItem.musicName | uppercase}}</p>
-      <p class="song-price">Director Name: {{ musicItem.musicDirector |directorName}}</p>
-      <p class="song-popularity">Views: {{ musicItem.musicViews | percent}}</p>
-      <p class="song-popularity">Traditional: {{ musicItem.istraditional }}</p>
-      <p> Budget: {{musicItem.budget | currency: 'CAD'}}</p>
-      <button type="button" (click)="deleteMusic(musicItem.musicName)">Delete</button>
-      <button type="button" (click)="navigateToMusicList()">Edit</button>
+      <mat-list>
+        
+      
+      
+        <mat-list-item><p class="artist-name">{{ musicItem.musicName | uppercase}}</p></mat-list-item>
+        <mat-divider></mat-divider>
+      <mat-list-item><p class="song-price">Director Name: {{ musicItem.musicDirector |directorName}}</p></mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list><p class="song-popularity">Views: {{ musicItem.musicViews | percent}}</p></mat-list>
+      <mat-divider></mat-divider>
+      <mat-list><p class="song-popularity">Traditional: {{ musicItem.istraditional }}</p></mat-list>
+      <mat-divider></mat-divider>
+      <mat-list><p> Budget: {{musicItem.budget | currency: 'CAD'}}</p></mat-list>
+      <mat-divider></mat-divider>
+      <mat-list><button type="button" (click)="deleteMusic(musicItem.musicName)">Delete</button></mat-list>
+      <mat-divider></mat-divider>
+      <mat-list><button type="button" (click)="navigateToMusicList()">Edit</button><br></mat-list>
+      
 
-    </div>
-  </div>
+    
+      <mat-icon svgIcon="thumbs-up" aria-hidden="false" aria-label="Example thumbs up SVG icon"></mat-icon>
+    </mat-list>
+ </div>
+ </div>
 
-  
+

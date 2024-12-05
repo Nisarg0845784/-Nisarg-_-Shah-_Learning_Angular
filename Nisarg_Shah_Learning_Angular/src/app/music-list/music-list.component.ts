@@ -1,16 +1,17 @@
-import { Component , OnInit} from '@angular/core';
+import { ChangeDetectionStrategy, Component , OnInit} from '@angular/core';
 import { Music } from '../models/music';
 import { MusicService } from '../services/music.service';
 import { NgFor } from '@angular/common';
 import { MusicListItemComponent } from '../music-list-item/music-list-item.component';
 import { HoverHighlightDirective } from '../directives/hover-highlight.directive';
-
+import { MatIconModule } from '@angular/material/icon';
 @Component({
   selector: 'app-music-list',
   standalone: true,
-  imports: [NgFor, MusicListItemComponent, HoverHighlightDirective],
+  imports: [NgFor, MusicListItemComponent, HoverHighlightDirective, MatIconModule],
   templateUrl: './music-list.component.html',
-  styleUrl: './music-list.component.scss'
+  styleUrl: './music-list.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MusicListComponent implements OnInit{
     musicList:Music[]=[];

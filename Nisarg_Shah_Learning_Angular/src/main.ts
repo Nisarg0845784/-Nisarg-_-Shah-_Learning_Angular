@@ -8,6 +8,9 @@ import { MusicListItemComponent } from './app/music-list-item/music-list-item.co
 import { ModifyListItemComponent } from './app/modify-list-item/modify-list-item.component';
 import { PageNotFoundComponent } from './app/page-not-found/page-not-found.component';
 import { provideRouter } from '@angular/router';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { MatNativeDateModule } from '@angular/material/core';
+import { importProvidersFrom } from '@angular/core';
 
 
 
@@ -28,5 +31,5 @@ const routes: Routes = [
       import('./app/page-not-found/page-not-found.component').then(m=>m.PageNotFoundComponent)}
 ];
 bootstrapApplication(AppComponent,{
-  providers: [provideRouter(routes)]
+  providers: [provideRouter(routes), provideAnimationsAsync(), importProvidersFrom(MatNativeDateModule)]
 });
