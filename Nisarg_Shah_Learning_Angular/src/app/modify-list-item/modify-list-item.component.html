@@ -6,42 +6,42 @@
       <mat-list-item>
         <mat-label>Music Type</mat-label>
       </mat-list-item>
-      <input matInput placeholder="Placeholder">
+      <input matInput placeholder="Placeholder" matTooltip="Tooltip for Music Type">
       <mat-divider></mat-divider>
 
       <mat-list-item>
         <mat-label>Music Name</mat-label>
       </mat-list-item>
-      <input matInput placeholder="Placeholder">
+      <input matInput placeholder="Placeholder" matTooltip="Tooltip for Music Name">
       <mat-divider></mat-divider>
 
       <mat-list-item>
         <mat-label>Director</mat-label>
       </mat-list-item>
-      <input matInput placeholder="Placeholder">
+      <input matInput placeholder="Placeholder" matTooltip="Tooltip for Director">
       <mat-divider></mat-divider>
 
       <mat-list-item>
         <mat-label>Music Views</mat-label>
       </mat-list-item>
-      <input matInput placeholder="Placeholder">
+      <input matInput placeholder="Placeholder" matTooltip="Tooltip for Music Views">
       <mat-divider></mat-divider>
 
       <mat-list-item>
-        <mat-checkbox class="example-margin" [(ngModel)]="checked">Traditional</mat-checkbox>
-        <mat-checkbox class="example-margin" [(ngModel)]="disabled">Disabled</mat-checkbox>
+        <mat-checkbox class="example-margin" [(ngModel)]="checked" matTooltip="Tooltip for Traditional">Traditional</mat-checkbox>
+        <mat-checkbox class="example-margin" [(ngModel)]="disabled" matTooltip="Tooltip for Disabled">Disabled</mat-checkbox>
       </mat-list-item>
       <mat-divider></mat-divider>
 
       <mat-list-item>
         <mat-label>Image Url</mat-label>
       </mat-list-item>
-      <input matInput placeholder="Placeholder">
+      <input matInput placeholder="Placeholder" matTooltip="Tooltip for Image Url">
       <mat-divider></mat-divider>
 
       <mat-list-item>
         <mat-label>Choose a date</mat-label>
-        <input matInput [matDatepicker]="picker">
+        <input matInput [matDatepicker]="picker" matTooltip="Tooltip for Date">
         <mat-hint>MM/DD/YYYY</mat-hint>
         <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
@@ -51,8 +51,8 @@
     </mat-list>
   </div>
 
-  <button type="button" (click)="addMusic()" appHighlightOnFocus="blue">Add Music</button>
-  <button type="button" (click)="updateMusic()" appHighlightOnFocus="blue">Update Music</button>
-  <button type="submit" appHighlightOnFocus="blue">Submit</button>
+  <button type="button" (click)="addMusic()" appHighlightOnFocus="blue" matTooltip="Tooltip for Add Music">Add Music</button>
+  <button type="button" (click)="updateMusic()" appHighlightOnFocus="blue" matTooltip="Tooltip for Update Music">Update Music</button>
+  <button type="submit" appHighlightOnFocus="blue" matTooltip="Tooltip for Submit">Submit</button>
 
 </form>

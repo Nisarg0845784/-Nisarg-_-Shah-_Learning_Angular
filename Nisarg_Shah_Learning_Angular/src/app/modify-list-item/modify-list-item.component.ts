@@ -1,5 +1,5 @@
 import { Component, model } from '@angular/core';
-import { FormBuilder, FormGroup, Validators, ReactiveFormsModule, FormsModule} from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, ReactiveFormsModule, FormsModule, FormControl} from '@angular/forms';
 import { Music } from '../models/music';
 import { OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -15,17 +15,25 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { TooltipPosition } from '@angular/material/tooltip';
+import { CdkScrollable } from '@angular/cdk/scrolling';
+import { MatButtonModule } from '@angular/material/button';
+
+
 
 
 @Component({
   selector: 'app-modify-list-item',
   standalone: true,
-  imports: [FormsModule, ReactiveFormsModule, HighlightOnFocusDirective, MatFormFieldModule, MatInputModule, MatIconModule, MatDatepickerModule, MatCardModule, MatCheckboxModule, MatListModule, MatDividerModule],
+  imports: [FormsModule, ReactiveFormsModule, HighlightOnFocusDirective, MatFormFieldModule, MatInputModule, MatIconModule, MatDatepickerModule, MatCardModule, MatCheckboxModule, MatListModule, MatDividerModule, MatTooltipModule, MatButtonModule, CdkScrollable],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './modify-list-item.component.html',
   styleUrl: './modify-list-item.component.scss'
 })
 export class ModifyListItemComponent implements OnInit{
+  positionOptions: TooltipPosition[] = ['below', 'above', 'left', 'right'];
+  position = new FormControl(this.positionOptions[0]);
   musicForm: FormGroup;
   song: Music | undefined;
   error: string | null = null;
